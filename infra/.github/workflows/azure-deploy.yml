@@ -1,0 +1,43 @@
+name: Build and Deploy to Azure
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Log in to Azure
+        uses: azure/login@v2
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+      - name: Install Azure Container Apps extension
+        run: az extension add --name containerapp --upgrade
+
+      - name: Log in to Azure Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: rabin0811acr.azurecr.io
+          username: ${{ secrets.ACR_USERNAME }}
+          password: ${{ secrets.ACR_PASSWORD }}
+
+      - name: Build and push Docker image
+        run: |
+          docker build -t rabin0811acr.azurecr.io/rabin-portfolio:latest \
+                       -t rabin0811acr.azurecr.io/rabin-portfolio:${{ github.sha }} .
+          docker push rabin0811acr.azurecr.io/rabin-portfolio:latest
+          docker push rabin0811acr.azurecr.io/rabin-portfolio:${{ github.sha }}
+
+      - name: Deploy to Azure Container Apps
+        run: |
+          az containerapp update \
+            --name rabin-portfolio-app \
+            --resource-group rabin-portfolio-rg \
+            --image rabin0811acr.azurecr.io/rabin-portfolio:${{ github.sha }}

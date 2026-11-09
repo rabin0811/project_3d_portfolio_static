@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Rabin Humagain — Resume</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+  :root { --accent: #0ea5e9; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Manrope', system-ui, sans-serif;
+    background: #f8fafc; color: #1e293b; padding: 40px 20px;
+    max-width: 800px; margin: 0 auto; line-height: 1.6;
+  }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-size: 13px; margin-bottom: 24px; color: var(--accent);
+  }
+  .header { text-align: center; margin-bottom: 32px; padding-bottom: 24px; border-bottom: 2px solid #e2e8f0; }
+  .header h1 { font-family: 'Space Grotesk', sans-serif; font-size: 32px; font-weight: 700; color: #0f172a; margin-bottom: 4px; }
+  .header .subtitle { font-size: 16px; color: #64748b; margin-bottom: 12px; }
+  .header .contact-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; font-size: 13px; color: #475569; }
+  .section { margin-bottom: 28px; }
+  .section-title {
+    font-family: 'Space Grotesk', sans-serif; font-size: 14px; font-weight: 600;
+    text-transform: uppercase; letter-spacing: 0.12em; color: var(--accent);
+    border-bottom: 2px solid var(--accent); padding-bottom: 6px; margin-bottom: 16px;
+  }
+  .entry { margin-bottom: 18px; }
+  .entry-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 4px; }
+  .entry-head h3 { font-family: 'Space Grotesk', sans-serif; font-size: 17px; font-weight: 600; color: #0f172a; }
+  .entry-head .period { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #94a3b8; }
+  .entry-head .company { font-size: 14px; color: #475569; margin-bottom: 4px; }
+  .entry p, .entry li { font-size: 14px; color: #475563; line-height: 1.6; }
+  .entry ul { padding-left: 20px; }
+  .entry li { margin-bottom: 4px; }
+  .skills-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px; }
+  .skill-cat { background: #fff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 14px 16px; }
+  .skill-cat h4 { font-family: 'Space Grotesk', sans-serif; font-size: 13px; font-weight: 600; color: #0f172a; margin-bottom: 6px; }
+  .skill-cat p { font-size: 13px; color: #64748b; line-height: 1.5; }
+  .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+  .tag { font-size: 11px; padding: 3px 10px; background: #f1f5f9; border: 1px solid #e2e8f0; border-radius: 999px; color: #64748b; }
+  .print-btn {
+    display: inline-flex; align-items: center; gap: 8px; padding: 10px 20px;
+    background: var(--accent); color: #fff; border: none; border-radius: 999px;
+    font-family: 'Space Grotesk', sans-serif; font-size: 14px; font-weight: 500;
+    cursor: pointer; margin-top: 24px;
+  }
+  .print-btn:hover { box-shadow: 0 4px 16px rgba(14,165,233,0.35); }
+  @media print {
+    body { padding: 0; background: #fff; }
+    .back-link, .print-btn { display: none; }
+    .section { break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+
+<a href="index.html" class="back-link">← Back to Portfolio</a>
+
+<div class="header">
+  <h1>Rabin Humagain</h1>
+  <p class="subtitle">Computer Engineering Student &amp; Full Stack Developer</p>
+  <div class="contact-row">
+    <span>📍 Nepal</span>
+    <span>📧 <a href="mailto:rabin.humagain@email.com">rabin.humagain@email.com</a></span>
+    <span>📞 +977 9762342058</span>
+    <span>💻 <a href="https://github.com/rabin0811" target="_blank">github.com/rabin0811</a></span>
+    <span>🔗 <a href="https://np.linkedin.com/in/rabin-humagain-417a35410" target="_blank">LinkedIn</a></span>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title">Summary</div>
+  <p style="font-size:14px;color:#475563">
+    Passionate Computer Engineering student and Full Stack Developer with expertise in modern web technologies, backend systems, and Linux environments. Proven ability to build robust CRUD applications using .NET and C#, craft immersive frontend experiences with React and Three.js, and solve complex networking and hardware challenges. Committed to continuous learning and open-source contribution.
+  </p>
+</div>
+
+<div class="section">
+  <div class="section-title">Experience</div>
+
+  <div class="entry">
+    <div class="entry-head">
+      <h3>Full Stack Developer</h3>
+      <span class="period">2023 – Present</span>
+    </div>
+    <p class="company">Freelance / Personal Projects</p>
+    <ul>
+      <li>Built full-stack web applications using .NET framework, C#, and modern frontend technologies</li>
+      <li>Developed CRUD applications with database integration and RESTful APIs</li>
+      <li>Created an interactive 3D portfolio using React Three Fiber, Framer Motion, and Tailwind CSS</li>
+      <li>Implemented physics-based 3D interactions with Rapier physics engine</li>
+      <li>Designed responsive, accessible, and performance-optimized user interfaces</li>
+    </ul>
+  </div>
+
+  <div class="entry">
+    <div class="entry-head">
+      <h3>Computer Engineering Student</h3>
+      <span class="period">2081 – Present</span>
+    </div>
+    <p class="company">ISMT College</p>
+    <ul>
+      <li>Studying core computer engineering concepts including data structures, algorithms, and networking</li>
+      <li>Building practical projects combining hardware and software knowledge</li>
+      <li>Developing Linux system administration skills</li>
+      <li>Learning advanced networking concepts through Cisco Academy</li>
+    </ul>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title">Education</div>
+  <div class="entry">
+    <div class="entry-head">
+      <h3>Bachelor in Computer Engineering</h3>
+      <span class="period">2081 – Present</span>
+    </div>
+    <p class="company">ISMT College</p>
+    <p>Focus on software development, networking, and system architecture</p>
+  </div>
+  <div class="entry">
+    <div class="entry-head">
+      <h3>+2 Science</h3>
+      <span class="period">Completed</span>
+    </div>
+    <p class="company">Balnikital Higher Secondary School</p>
+    <p>Higher secondary education in science stream</p>
+  </div>
+  <div class="entry">
+    <div class="entry-head">
+      <h3>SEE</h3>
+      <span class="period">Completed</span>
+    </div>
+    <p class="company">Shree Karthari Secondary School</p>
+    <p>Secondary Education Examination</p>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title">Skills</div>
+  <div class="skills-grid">
+    <div class="skill-cat">
+      <h4>Frontend</h4>
+      <p>HTML · CSS · JavaScript · React · Tailwind CSS · Framer Motion</p>
+    </div>
+    <div class="skill-cat">
+      <h4>Backend</h4>
+      <p>.NET Framework · C# · REST APIs · CRUD Applications · OOP</p>
+    </div>
+    <div class="skill-cat">
+      <h4>3D &amp; Graphics</h4>
+      <p>Three.js · React Three Fiber · WebGL · GSAP</p>
+    </div>
+    <div class="skill-cat">
+      <h4>Tools &amp; Platforms</h4>
+      <p>Git · GitHub · Windows · Linux · VS Code</p>
+    </div>
+    <div class="skill-cat">
+      <h4>Networking &amp; Hardware</h4>
+      <p>Networking Fundamentals · Hardware Troubleshooting · System Administration</p>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title">Certifications</div>
+  <div class="entry">
+    <div class="entry-head">
+      <h3>Cisco Networking Academy</h3>
+      <span class="period">Completed</span>
+    </div>
+    <p class="company">Cisco</p>
+    <p>Comprehensive networking fundamentals covering routing, switching, and network configuration</p>
+  </div>
+  <div class="entry">
+    <div class="entry-head">
+      <h3>Computer Hardware Training Level 2</h3>
+      <span class="period">Completed</span>
+    </div>
+    <p class="company">Technical Training Institute</p>
+    <p>Advanced hardware troubleshooting, component-level repair, and system maintenance</p>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title">Languages</div>
+  <div class="tags">
+    <span class="tag">English</span>
+    <span class="tag">Nepali</span>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title">Interests</div>
+  <div class="tags">
+    <span class="tag">Open Source</span>
+    <span class="tag">Linux</span>
+    <span class="tag">Networking</span>
+    <span class="tag">3D Graphics</span>
+    <span class="tag">Hardware</span>
+  </div>
+</div>
+
+<button class="print-btn" onclick="window.print()">🖨️ Print / Save as PDF</button>
+
+</body>
+</html>
